@@ -65,7 +65,7 @@ get_header();
                         $args = array(
                             'posts_per_page' => -1,
                             'post_type'      => 'equipe',
-                            'order'          => 'DESC'
+                            'order'          => 'ASC'
                         );
 
                         $teams = new WP_Query( $args );

@@ -15,7 +15,7 @@
             <div class="col-lg-4 d-flex align-items-end">
 
                 <p class="l-impact__date u-font-weight-semibold text-uppercase u-color-folk-theme">
-                    (outubro/2021)
+                    (<?php echo get_field('mes_impacto', 'option')?>/<?php echo get_field('ano_impacto', 'option')?>)
                 </p>
             </div>
         </div>
@@ -162,11 +162,11 @@
                 <div class="l-impact__progress">
                     <span 
                     class="l-impact__progress__bar js-progress-bar" 
-                    data-value="75"></span>
+                    data-value="<?php echo get_field ('meta','option') ?>"></span>
                 </div>
 
                 <p class="l-impact__text-achieved u-font-weight-black text-center text-md-right text-uppercase all:u-color-folk-primary">
-                    <span class="l-impact__text-achieved--number js-progress-number">75%</span> alcançados
+                    <span class="l-impact__text-achieved--number js-progress-number"><?php echo get_field ('meta','option') ?> . %</span> alcançados
                 </p>
 
                 <div class="row justify-content-end">
@@ -175,7 +175,7 @@
 
                         <a 
                         class="l-news__small__card-read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-2 px-5" 
-                        href="#">
+                        href="<?php echo get_field('quero_contribuir_btn', 'option')?>">
                             Quero contribuir
                         </a>
                     </div>

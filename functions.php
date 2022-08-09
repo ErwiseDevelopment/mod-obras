@@ -187,7 +187,8 @@ function mantenedora_create_post_type() {
 		'public' 		=> true,
 		'has_archive'	=> true,
 		'menu_icon'		=> 'dashicons-welcome-write-blog',
-		'supports' 		=> array( 'title', 'thumbnail' ) 
+		'supports' 		=> array( 'title', 'thumbnail' ),
+        
 	) );
 }
 add_action( 'init', 'mantenedora_create_post_type' );
@@ -348,3 +349,6 @@ acf_add_options_page(
                 'redirect'   => false, 
                 'icon_url'   => 'dashicons-editor-help',
         ));
+
+
+

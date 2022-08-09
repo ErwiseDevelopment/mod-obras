@@ -45,76 +45,24 @@
 
                                         <span class="l-testimonials__text d-block u-font-weight-medium">
                                             <?php 
+                                                
                                                 echo limit_words(get_sub_field( 'depoimento__descricao' ), 60); 
                                                 
                                                 add_read_more(get_sub_field( 'depoimento__descricao' ), 60, $count);
                                             ?>
                                         </span>
-
                                         <p class="l-testimonials__date u-font-weight-bold u-color-folk-theme">
-                                            <!-- 15 de setembro de 2021 -->
-                                            <?php 
-                                                list($data_day, $data_month, $data_year) = explode('/', get_sub_field( 'data_depoimento' )); 
-                                                echo $data_day . ' de ' . get_long_month( $data_month ) . ' de ' . $data_year;    
-                                            ?>
+                                        <?php echo get_sub_field ('nome_ou_empresa', 'option'); ?>
                                         </p>
-                                    </div>
+
+                                        </div>
                         <?php
                                 endwhile;
                             endif;
                         ?>
                         <!--  end slide -->
 
-                        <!-- <div class="swiper-slide flex-column align-items-start">
-
-                            <div class="mx-auto">
-                                <span class="u-title--highlight u-line-height-100 u-font-weight-black u-color-folk-theme">
-                                    “
-                                </span>
-                            </div>
-
-                            <p class="l-testimonials__text u-font-weight-medium">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt iaculis quam, vitae rhoncus ligula vestibulum quis. Fusce ac orci nec neque porttitor luctus nec ut urna. Nunc condimentum luctus metus nec suscipit. Vestibulum vitae velit eu velit tincidunt euismod. Praesent commodo velit sit amet rhoncus molestie. Integer accumsan sollicitudin interdum. 
-                            </p>
-
-                            <p class="l-testimonials__date u-font-weight-bold u-color-folk-theme">
-                                15 de setembro de 2021
-                            </p>
-                        </div>
-
-                        <div class="swiper-slide flex-column align-items-start">
-
-                            <div class="mx-auto">
-                                <span class="u-title--highlight u-line-height-100 u-font-weight-black u-color-folk-theme">
-                                    “
-                                </span>
-                            </div>
-
-                            <p class="l-testimonials__text u-font-weight-medium">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt iaculis quam, vitae rhoncus ligula vestibulum quis. Fusce ac orci nec neque porttitor luctus nec ut urna. Nunc condimentum luctus metus nec suscipit. Vestibulum vitae velit eu velit tincidunt euismod. Praesent commodo velit sit amet rhoncus molestie. Integer accumsan sollicitudin interdum. 
-                            </p>
-
-                            <p class="l-testimonials__date u-font-weight-bold u-color-folk-theme">
-                                15 de setembro de 2021
-                            </p>
-                        </div>
-
-                        <div class="swiper-slide flex-column align-items-start">
-
-                            <div class="mx-auto">
-                                <span class="u-title--highlight u-line-height-100 u-font-weight-black u-color-folk-theme">
-                                    “
-                                </span>
-                            </div>
-
-                            <p class="l-testimonials__text u-font-weight-medium">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt iaculis quam, vitae rhoncus ligula vestibulum quis. Fusce ac orci nec neque porttitor luctus nec ut urna. Nunc condimentum luctus metus nec suscipit. Vestibulum vitae velit eu velit tincidunt euismod. Praesent commodo velit sit amet rhoncus molestie. Integer accumsan sollicitudin interdum. 
-                            </p>
-
-                            <p class="l-testimonials__date u-font-weight-bold u-color-folk-theme">
-                                15 de setembro de 2021
-                            </p>
-                        </div> -->
+                        
                     </div>
                 </div>
 
@@ -176,18 +124,17 @@
                             <p class="l-modal-testimonials__btn-close hover:u-opacity-8 u-box-shadow-pattern d-inline-block u-font-weight-bold u-color-folk-white u-bg-folk-secondary u-cursor-pointer py-2 px-4 js-modal-testimonials-btn-close">
                                 Fechar
                             </p>
-
+                           
                             <div class="l-modal-testimonials__box u-box-shadow-pattern u-bg-folk-white p-3">
-
+                                <p class="l-testimonials__date u-font-weight-bold u-color-folk-theme">
+                                <?php echo get_sub_field ('nome_ou_empresa', 'option'); ?>
+                                </p>
                                 <p class="u-font-size-14">
                                     <?php echo get_sub_field( 'depoimento__descricao' ) ?>
                                 </p>
 
-                                <p class="l-testimonials__date u-font-weight-bold u-color-folk-theme">
-                                    <?php
-                                        list($data_day, $data_month, $data_year) = explode('/', get_sub_field( 'data_depoimento' )); 
-                                        echo $data_day . ' de ' . get_long_month( $data_month ) . ' de ' . $data_year;    
-                                    ?>
+                               
+                                
                                 </p>
                             </div>
                         </div>

@@ -58,10 +58,11 @@ get_header(); ?>
                         <div class="row justify-content-end">
 
                             <div class="col-md-12">
-
+                            <?php
+                            $link_pattern = get_field( 'link_padrao_portal', 'option' );?>
                                 <a 
                                 class="l-news__small__card-read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-2 px-5" 
-                                href="#">
+                                href="<?php echo $link_pattern . get_field ('ver_todas_noticias','option')?>" <?php if (get_field('nova_guia_news')=='1'):?> target = "_blank" <?php endif;?>>
                                     Ver todas as notícias
                                 </a>
                             </div>

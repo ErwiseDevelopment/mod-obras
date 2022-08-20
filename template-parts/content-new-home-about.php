@@ -48,7 +48,8 @@
                             <div class="col-md-5">
                                 <a 
                                 class="l-news__small__card-read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-2 px-5" 
-                                href="<?php echo get_field( 'saiba_mais_quem_somos' ) ?>">
+                                href="<?php echo get_field( 'saiba_mais_quem_somos' ) ?>" <?php if (get_field('nova')=='1'):?> target="_blank"
+                                <?php endif; ?>>
                                     Saiba mais
                                 </a>
                             </div>

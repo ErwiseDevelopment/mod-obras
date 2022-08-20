@@ -121,7 +121,7 @@ get_header();
                                             <hr>
 
                                             <p>
-                                                <strong>Salário: </strong><?php echo get_field( 'salario' ) ?> <br>
+                                              
                                                 <strong>Período: </strong><?php echo get_field( 'periodo' ) ?>
                                             </p>
                                         </div>

@@ -147,8 +147,7 @@
 
                         <a 
                         class="l-blogs__btn-more-content w-100 u-line-height-100 u-border-2 u-border-color-theme d-block u-font-weight-bold text-center text-uppercase text-decoration-none u-color-folk-theme hover:u-color-folk-white u-bg-folk-none hover:u-bg-folk-theme p-3" 
-                        href="http://portalerwise.test/blogs?cat=39"
-                        data-aos="zoom-in">
+                        href="<?php echo $link_pattern . get_field ('+_conteudos_btn','option')?>" <?php if(get_field('nova_guia_conteudo')=='1'): ?> target = "_blank" <?php endif;?>                        data-aos="zoom-in">
                             + Conteúdos
                         </a>
                     </div>

@@ -24,7 +24,7 @@ get_header(); ?>
 
                 <img
                 class="img-fluid"
-                src="<?php echo get_home_url( null, 'wp-content/uploads/2022/02/banner-osj.png') ?>"
+                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/banner-pagina-galeria.png"
                 alt="<?php the_title() ?>">
             </div>
         </div>

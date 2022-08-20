@@ -174,7 +174,7 @@ function mantenedora_create_post_type() {
 	) );
 
 
-    register_post_type( 'fotos', array(
+    register_post_type( 'galeria', array(
 		'labels' 		=> array( 'name' => 'Galeria', 'singular_name' => 'Galeria', 'all_items' => 'Todas as Fotos' ),
 		'public' 		=> true,
 		'has_archive'	=> true,
@@ -188,7 +188,15 @@ function mantenedora_create_post_type() {
 		'has_archive'	=> true,
 		'menu_icon'		=> 'dashicons-welcome-write-blog',
 		'supports' 		=> array( 'title', 'thumbnail' ),
-        
+
+        // register_post_type( 'estrutura', array(
+        //     'labels'        => array( 'name' => 'Nossa estrutura', 'singular_name' => 'Nossa estrutura', 'all_items' => 'Todos ambientes' ),
+        //     'public'        => true,
+        //     'has_archive'   => true,
+        //     'menu_icon'     => 'dashicons-book',
+        //     'menu-position' => 10,
+        //     'supports'      => array( 'title', 'editor', 'author' )
+        // ) ),
 	) );
 }
 add_action( 'init', 'mantenedora_create_post_type' );
@@ -225,16 +233,16 @@ add_action('wp_enqueue_scripts', 'single_temas_scripts');
 
 // Ocultar campos menu
 
-function remove_links_menu() {
-    remove_menu_page('edit.php'); // Posts
-    remove_menu_page('link-manager.php'); // Links
-    remove_menu_page('edit-comments.php'); // Comentarios
-    //remove_menu_page('themes.php'); // Aparencia
-    remove_menu_page('plugins.php'); // Plugins
-    remove_menu_page('tools.php'); // Ferramentas
-    remove_menu_page('options-general.php'); // Configuracoes
-}
-add_action( 'admin_menu', 'remove_links_menu' );
+// function remove_links_menu() {
+//     remove_menu_page('edit.php'); // Posts
+//     remove_menu_page('link-manager.php'); // Links
+//     remove_menu_page('edit-comments.php'); // Comentarios
+//     //remove_menu_page('themes.php'); // Aparencia
+//     remove_menu_page('plugins.php'); // Plugins
+//     remove_menu_page('tools.php'); // Ferramentas
+//     remove_menu_page('options-general.php'); // Configuracoes
+// }
+// add_action( 'admin_menu', 'remove_links_menu' );
 
 //Logo pagina login
 
@@ -350,5 +358,21 @@ acf_add_options_page(
                 'icon_url'   => 'dashicons-editor-help',
         ));
 
-
-
+        function single_temas_scripts1()
+        {
+            //css
+            wp_enqueue_style('single-temas-style', get_stylesheet_uri());
+            wp_enqueue_style('single-temas-main-style', get_template_directory_uri() . '/../wp-bootstrap-starter-child/assets/css/main.css');
+            wp_enqueue_style('custom-style', get_template_directory_uri() . '/style.css');
+        
+            //js
+            wp_enqueue_script('single-temas-swiper-scripts', get_template_directory_uri() . '/../wp-bootstrap-starter-child/assets/js/swiper.min.js', array(), '1.0.2', true);
+            wp_enqueue_script('single-temas-swiper-folk-scripts', get_template_directory_uri() . '/../wp-bootstrap-starter-child/assets/js/swiper-folk.js', array(), '1.0.2', true);
+            wp_enqueue_script('single-temas-main-scripts', get_template_directory_uri() . '/../wp-bootstrap-starter-child/assets/js/main.js', array(), '1.0.2', true);
+            wp_enqueue_script('single-temas-menu-toggle', get_template_directory_uri() . '/../wp-bootstrap-starter-child/assets/js/menu-toggler.js', array(), '1.0.2', true);
+            wp_enqueue_script('single-temas-select-change-month', get_template_directory_uri() . '/../wp-bootstrap-starter-child/assets/js/select-change-month.js', array(), '1.0.2', true);
+            wp_enqueue_script('single-temas-loader', get_template_directory_uri() . '/../wp-bootstrap-starter-child/assets/js/loader.js', array(), '1.0.2', true);
+            wp_enqueue_script('single-temas-modes-teaching', get_template_directory_uri() . '/../wp-bootstrap-starter-child/assets/js/modes-teaching.js', array(), '1.0.2', true);
+            wp_enqueue_script('single-temas-modal-photos', get_template_directory_uri() . '/../wp-bootstrap-starter-child/assets/js/modal-photos.js', array(), '1.0.3', true);
+        }
+        add_action('wp_enqueue_scripts', 'single_temas_scripts1');

@@ -9,16 +9,6 @@ Template: wp-bootstrap-starter
 License URI: LICENSE
 Text Domain: wp-bootstrap-starter-child
 */
-
-/* utilities */
-.u-cursor-pointer {
-	cursor: pointer !important;
-}
-
-.u-object-fit-cover {
-	object-fit: cover !important;
-}
-
 @media screen and (min-width: 1600px) {
 	.l-blogs__highlight__title {
 		font-size: 2.5rem;	
@@ -29,107 +19,38 @@ Text Domain: wp-bootstrap-starter-child
 	}
 }
 
-.l-gallery__album img {
-	height: 298px;
-	object-fit: cover;
+.l-top__social-media__item {
+	width: 30px !important;
+	height: 30px !important;
 }
 
-.l-single-photos img {
-	height: 158px;
-	object-fit: cover;
+.l-navbar__brand-box {
+	width: 110px;
+	height: 126px;
 }
 
-.l-modal-photos {
+.l-navbar__brand-box::before {
+	content: '';
 	width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-	transition: all .6s;
-	opacity: 0;
-	visibility: hidden;
-    position: fixed;
-    background-color: rgba(0, 0, 0, .5);
-    z-index: 9;
-}
-
-.l-modal-photos.is-active {
-	opacity: 1;
-	visibility: visible;
-}
-
-.l-modal-photos__overlay {
+	height: 150px;
 	top: 0;
-	bottom: 0;
 	left: 0;
-	right: 0;
 	position: absolute;
-	z-index: 0;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	background-color: #FFF;
+	z-index: 4;
 }
 
-.l-modal-photos__close {
-	top: 2rem;
-	right: 2rem;
-	position: absolute;
-	font-size: 3rem;
-	font-weight: 700;
-	font-family: cursive;
-	color: #FFF;
-	cursor: pointer;
+.l-navbar__brand-box a {
+	transform: translateY(-12px);
+	z-index: 4;
 }
 
-.l-modal-photos__image {
-	object-fit: cover;
+.l-navbar .nav-item {
+	margin: 0 .5rem !important;
 }
 
-@media screen and (max-width: 575px) {
-	.l-modal-photos__close {
-		left: 50%;
-		right: unset;
-		transform: translateX(-50%);
-		font-size: 4rem;
-	}
-}
-
-.swiper-button-prev-modal-photos::after,
-.swiper-button-next-modal-photos::after {
-	font-size: 1.875rem;
-	font-weight: 900;
-	font-family: 'Montserrat', sans-serif;
-	color: #FFF !important;
-}
-
-.swiper-button-prev-modal-photos {
-    left: -3rem;
-}
-
-@media screen and (max-width: 575px) {
-	.swiper-button-prev-modal-photos {
-		top: calc(100% + 2rem);
-		left: 3rem;
-	}
-}
-
-.swiper-button-prev-modal-photos::after {
-	content: '<';
-	font-size: 3rem;
-}
-
-.swiper-button-next-modal-photos {
-    right: -3rem;
-}
-
-@media screen and (max-width: 575px) {
-	.swiper-button-next-modal-photos {
-		top: calc(100% + 2rem);
-		right: 3rem;
-	}
-}
-
-.swiper-button-next-modal-photos::after {
-	content: '>';	
-	font-size: 3rem;
-}
-
-.l-testimonials__text {
-	font-style: italic;
+.l-navbar .nav-link {
+	font-size: .875rem !important;
 }

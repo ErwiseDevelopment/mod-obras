@@ -39,7 +39,8 @@
                                 </p>
 
                                 <p class="l-impact__items__description u-line-height-100 u-font-weight-semibold text-center text-lg-left mb-0">
-                                    crianças
+                                    <!-- crianças -->
+                                    <?php echo get_sub_field('texto_crianca'); ?>
                                 </p>
                             </div>
                 
@@ -54,7 +55,8 @@
                                 </p>
 
                                 <p class="l-impact__items__description u-line-height-100 u-font-weight-semibold text-center text-lg-left mb-0">
-                                    adolescentes e jovens
+                                    <!-- adolescentes e jovens -->
+                                    <?php echo get_sub_field('texto_jovens'); ?>
                                 </p>
                             </div>
 
@@ -68,7 +70,8 @@
                                 </p>
 
                                 <p class="l-impact__items__description u-line-height-100 u-font-weight-semibold text-center text-lg-left mb-0">
-                                    jovens aprendizes
+                                    <!-- jovens aprendizes -->
+                                    <?php echo get_sub_field('texto_aprendiz'); ?>
                                 </p>
                             </div>
 
@@ -82,7 +85,8 @@
                                 </p>
 
                                 <p class="l-impact__items__description u-line-height-100 u-font-weight-semibold text-center text-lg-left mb-0">
-                                    cestas básicas entregues
+                                    <!-- cestas básicas entregues -->
+                                    <?php echo get_sub_field('texto_cestas'); ?>
                                 </p>
                             </div>
 

@@ -1,47 +1,21 @@
-<section class="l-new-home-about my-5">
+<section class="l-links my-5">
 
-    <div class="container-fluid">
+    <div class="container">
 
         <div class="row">
 
-            <div class="col-12">
+            <div class="col-12 mb-4">
 
-                <div class="row">
+                <div class="row justify-content-end">
 
-                    <div class="col-lg-5 pl-lg-0"> 
-                        <!-- <img
-                        class="img-fluid h-100"
-                        src="<php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/new-home-about-image-1.png"
-                        alt=""> -->
-
-                        <img
-                        class="img-fluid h-100"
-                        src="<?php echo get_field( 'imagem_quem_somos' ) ?>"
-                        alt="Quem Somos">
+                    <div class="col-lg-5 mb-3 mb-md-0">
+                        <h3 class="u-title--highlight u-line-height-100 u-font-weight-bold text-uppercase all:u-color-folk-theme mb-0">
+                            Nossos <br> 
+                            <span class="u-font-weight-black">Parceiros:</span>
+                        </h3>
                     </div>
 
-                    <div class="col-lg-5 mt-3 mt-md-0">
-
-                        <h3 class="u-title--highlight u-font-weight-bold text-uppercase all:u-color-folk-theme mb-4">
-                            quem <span class="u-font-weight-black">somos</span>
-                        </h3>
-
-                        <!-- <p class="l-new-home-about__text u-font-weight-medium text-justify">
-                            O Parque Dom Bosco é uma obra social da Rede
-                            Salesiana Brasil, que atua na cidade de Itajaí na
-                            educação e evangelização de crianças, adolescentes e jovens <br>
-
-                            <br>
-
-                            Temos 60 anos de serviços prestados a comunidade
-                            Itajaiense atuando na educação e evangelização de
-                            crianças, adolescentes e jovens. Sinta-se em casa, você
-                            será sempre bem-vindo!
-                        </p> -->
-
-                        <span class="l-new-home-about__text d-block u-font-weight-medium text-justify">
-                            <?php echo get_field( 'descricao_quem_somos' ) ?>
-                        </span>
+                    <div class="col-lg-6 d-flex justify-content-md-end align-items-end">
 
                         <div class="row justify-content-end">
 
@@ -55,6 +29,39 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="col-12 d-flex flex-wrap justify-content-between align-items-center mt-4">
+
+                <!-- swiper -->
+                <div class="swiper-container js-swiper-partners">
+
+                    <div class="swiper-wrapper">
+
+                        <?php 
+                            if(have_rows( 'parceiros', 'option' )) : 
+                                while(have_rows( 'parceiros', 'option' )) : the_row();
+                        ?>
+                                    <div class="swiper-slide">
+                                        <a 
+                                        href="<?php echo get_sub_field( 'link_logo_parceiros' ) ?>"
+                                        target="_blank"
+                                        rel="noreferrer noopener">
+                                            <img
+                                            class="img-fluid"
+                                            src="<?php echo get_sub_field( 'logo_parceiros' ) ?>"
+                                            alt="<?php the_title() ?>">
+                                        </a>
+                                    </div>
+                        <?php endwhile;
+                            endif;
+                        ?>
+                    </div>
+                </div>
+
+                <div class="swiper-button-prev swiper-button-prev-partners after::u-color-folk-white u-bg-folk-primary js-swiper-button-prev-partners"></div>
+                <div class="swiper-button-next swiper-button-next-partners after::u-color-folk-white u-bg-folk-primary js-swiper-button-next-partners"></div>
+                <!-- end swiper -->
             </div>
         </div>
     </div>

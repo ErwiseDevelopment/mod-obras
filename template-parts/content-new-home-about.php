@@ -1,3 +1,9 @@
+<style>
+    .u-object-fit-cover {
+        object-fit: cover !important;
+    }
+</style>
+
 <section class="l-new-home-about my-5">
 
     <div class="container-fluid">
@@ -15,7 +21,7 @@
                         alt=""> -->
 
                         <img
-                        class="img-fluid h-100"
+                        class="img-fluid w-100 h-100 u-object-fit-cover"
                         src="<?php echo get_field( 'imagem_quem_somos' ) ?>"
                         alt="Quem Somos">
                     </div>

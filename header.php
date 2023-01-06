@@ -247,7 +247,7 @@
                                         <div class="col-12">
                                             <?php if( $buttons[2][ 'visivel' ] == 'Sim' ) : ?>
                                                     <a
-                                                    class="d-block hover:u-opacity-8 u-font-size-10 u-font-weight-bold text-center text-decoration-none my-1 py-2 px-4"
+                                                    class="d-block hover:u-opacity-8 u-font-size-10 u-font-weight-bold text-center text-decoration-none mb-1 py-2 px-4"
                                                     style="color:<?php echo $buttons[2][ 'cor' ]; ?>;background-color:<?php echo $buttons[2][ 'cor_de_fundo' ]; ?>"
                                                     href="<?php echo $buttons[2]['link_do_botao']; ?>"
                                                     <?php if( $buttons[2][ 'abrir_em_uma_nova_aba' ] == 'Sim' ) : ?>
@@ -431,12 +431,14 @@
                                         <a
                                         class="d-block hover:u-opacity-8 u-font-size-14 u-font-weight-bold text-center text-decoration-none my-1 py-2 px-4"
                                         style="color:<?php echo get_sub_field( 'cor' ) ?>;background-color:<?php echo get_sub_field( 'cor_de_fundo' ) ?>"
-                                        href="#"
-                                        <?php if( get_sub_field( 'abrir_em_uma_nova_aba' ) == 'Sim' ) : ?>
+                                        href="<?php echo get_sub_field( 'link_do_botao' );?>" 
+                                        <?php if( get_sub_field( 'abrir_em_uma_nova_aba' ) == '1'): ?>
                                             target="_blank"
                                         <?php endif; ?>>
                                             <?php echo get_sub_field( 'texto' ) ?>
                                         </a>
+														   
+														 
                             <?php
                                         endif;
                                     endwhile;

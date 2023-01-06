@@ -93,7 +93,7 @@
                     <div class="col-lg-4">
                         <a 
                         class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-2 px-5" 
-                        href="https://novolar.erwise.com.br/depoimento/">
+                        href="<?php get_home_url(null, '/') . 'depoimento' ?>">
                             Deixe um depoimento!
                         </a>
                     </div>

@@ -26,19 +26,6 @@
                             quem <span class="u-font-weight-black">somos</span>
                         </h3>
 
-                        <!-- <p class="l-new-home-about__text u-font-weight-medium text-justify">
-                            O Parque Dom Bosco é uma obra social da Rede
-                            Salesiana Brasil, que atua na cidade de Itajaí na
-                            educação e evangelização de crianças, adolescentes e jovens <br>
-
-                            <br>
-
-                            Temos 60 anos de serviços prestados a comunidade
-                            Itajaiense atuando na educação e evangelização de
-                            crianças, adolescentes e jovens. Sinta-se em casa, você
-                            será sempre bem-vindo!
-                        </p> -->
-
                         <span class="l-new-home-about__text d-block u-font-weight-medium text-justify">
                             <?php echo get_field( 'descricao_quem_somos' ) ?>
                         </span>

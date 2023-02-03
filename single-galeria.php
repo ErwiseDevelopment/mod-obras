@@ -114,17 +114,18 @@ get_header(); ?>
                     <div class="swiper-wrapper">
                         
                         <!-- slide -->
-                        <?php 
-                            if( have_rows( 'galeria' ) ) :
-                                while( have_rows( 'galeria' ) ) : the_row();
+                        <?php
+                            if( $images ) :
+                                foreach( $images as $image ) :
                         ?>
                                     <div class="swiper-slide">
                                         <img
                                         class="l-modal-photos__image img-fluid w-100"
-                                        src="<?php echo get_sub_field( 'foto' ) ?>"
+                                        src="<?php echo $image[ 'url' ]; ?>"
                                         alt="<?php the_title() ?>">
                                     </div>
-                        <?php   endwhile;
+                        <?php
+                                endforeach;
                             endif;
                         ?>
                         <!-- end slide -->

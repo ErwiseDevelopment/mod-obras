@@ -46,19 +46,38 @@ get_header(); ?>
 
                 <div class="row">
 
-                    <?php 
+                    <!-- <php 
                         if( have_rows( 'galeria' ) ) :
                             while( have_rows( 'galeria' ) ) : the_row();
+                    ?>
+                                <div class="col-3 my-3 js-photos" data-value="<php echo $count; ?>">
+                                    <img
+                                    class="img-fluid w-100"
+                                    style="height:190px!important;object-fit:cover"
+                                    src="<php echo get_sub_field( 'foto' ) ?>"
+                                    alt="<php the_title() ?>">
+                                </div>
+                    <php   endwhile;
+                        endif;
+                    ?> -->
+
+                    <?php $images = get_field('galeria');
+                    $count= -1;
+
+                        if ($images) :
+                                foreach($images as $image) :
+                                $count++;
                     ?>
                                 <div class="col-3 my-3 js-photos" data-value="<?php echo $count; ?>">
                                     <img
                                     class="img-fluid w-100"
                                     style="height:190px!important;object-fit:cover"
-                                    src="<?php echo get_sub_field( 'foto' ) ?>"
+                                    src="<?php echo $image[ 'url' ] ?>"
                                     alt="<?php the_title() ?>">
                                 </div>
-                    <?php   endwhile;
-                        endif;
+                    <?php 
+                        endforeach;
+                    endif;
                     ?>
                 </div>
             </div>
